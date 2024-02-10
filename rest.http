@@ -1,0 +1,46 @@
+
+### parse request body
+POST  http://localhost:3000/products
+Content-Type: application/json
+
+{
+    "name": "smp i3",
+    "price": 741
+}
+ 
+### getting all the products 
+GET  http://localhost:3000/products
+
+### get a product by  id
+GET  http://localhost:3000/products/65801fe61612f0be01d89e49
+
+### update a product by  id
+PATCH  http://localhost:3000/products/65801fe61612f0be01d89e49
+Content-Type: application/json
+
+{
+   "name": "imac",
+    "price" : 7777
+}
+
+### delete a product by  product
+DELETE  http://localhost:3000/products/65801f461612f0be01d89e45
+
+
+###404 route not found 
+GET  http://localhost:3000/
+
+### parse query string 
+GET  http://localhost:3000/test?name=imac&price=2000
+
+### parse query params
+GET  http://localhost:3000/test/78547/imac
+
+
+
+### url encoded request body
+POST  http://localhost:3000/test
+Content-Type: application/x-www-form-urlencoded
+
+name=iMac&price=499
+ 
